@@ -1,1 +1,58 @@
-/* Start coding here */
+.feature-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 120px;
+  height: 272px;
+  width: 1201px;
+  margin: 0 auto;
+}
+
+.feature-container-streamlined {
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  gap: 40px;
+  background-color: #D7e5F6;
+  padding: 28px;
+  width: 387px;
+  height: 272px;
+}
+.feature-container-blazing {
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  gap: 40px;
+  background-color: #d8e0fc;
+  padding: 28px;
+  width: 387px;
+  height: 272px;
+}
+.feature-container-intuitive {
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  gap: 40px;
+  background-color: #e8dcf6;
+  padding: 28px;
+  width: 387px;
+  height: 272px;
+}
+img {
+  background-color: #ffffff;
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  padding: 10px;
+}
+p {
+  margin: 0;
+  color: #5f5f76;
+  font-size: 16px;
+}
+h1 {
+  color: #000000;
+  font-size: 24px;
+  margin: 0;
+}
