@@ -1,1 +1,171 @@
-/* Start coding here */
+/* Reset ค่า margin, padding และ box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* กำหนดรูปแบบตัวหนังสือ พื้นหลัง และสีตัวหนังสือในหน้า */
+  body {
+    font-family: Arial, sans-serif;
+    background: white;
+    color: black;
+    /* padding-top: 80px;  <-- เว้นพื้นที่บนถ้าใช้เมนู fixed */
+  }
+  
+  /* container กว้าง 1200px กึ่งกลางหน้าจอ */
+  .container {
+    width: 1200px;       /* กว้างขึ้นจาก 1000px เป็น 1200px */
+    margin: 0 auto;      /* กึ่งกลางอัตโนมัติ */
+    padding: 0 20px;     /* เว้นช่องซ้ายขวาเล็กน้อย */
+  }
+  
+  /* ส่วน header ด้านบน */
+  header {
+    /* position: fixed;  ลบออกเพราะยังไม่เรียน */
+    /* top: 0;          ลบออก */
+    /* z-index: 10;     ลบออก */
+    background: white;
+    padding: 20px 0;               /* เว้นระยะบน-ล่าง */
+    border-radius: 0 0 25px 25px; /* โค้งเฉพาะขอบล่าง */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* เงาเล็กน้อย */
+  }
+  
+  /* nav กว้าง 1200px ตาม container */
+  nav {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 15px 15px 15px 30px; /* ลด padding ขวาจาก 30px เหลือ 15px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  /* โลโก้ */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  /* เมนูรายการ (ul) */
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 4px;          /* ช่องว่างระหว่างลิงก์น้อยลง */
+    margin-right: 30px; /* ขยับเมนูเข้าซ้าย ฝั่งขวายังอยู่ */
+  }
+  
+  /* แต่ละลิงก์ในเมนู */
+  .nav-links a {
+    text-decoration: none; /* เอาเส้นใต้ลิงก์ออก */
+    color: black;
+    font-weight: 500;
+    padding: 8px 12px;      /* ลด padding รอบลิงก์ */
+    border-radius: 15px;    /* โค้งขอบ */
+  }
+  
+  /* เมื่อชี้เมาส์บนลิงก์ */
+  .nav-links a:hover {
+    color: #8b5cf6;        /* สีม่วง */
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  
+  /* ลิงก์ที่ใช้งานอยู่ (active) */
+  .nav-links a.active {
+    color: #8b5cf6;
+    font-weight: 600;
+  }
+  
+  /* ส่วน Hero */
+  .hero {
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  /* แบนเนอร์เล็กใน Hero */
+  .app-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(139, 92, 246, 0.1);
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 13px;
+    color: #8b5cf6;
+    margin-bottom: 40px;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+  }
+  
+  /* ใส่ไอคอนก่อนข้อความ */
+  .app-badge::before {
+    content: '🌈';
+    font-size: 16px;
+  }
+  
+  /* หัวข้อใหญ่ใน Hero */
+  .hero h1 {
+    font-size: 64px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    color: black;
+  }
+  
+  /* เน้นสีม่วงบางคำในหัวข้อ */
+  .hero h1 .highlight {
+    color: #8b5cf6;
+  }
+  
+  /* ข้อความสีดำปกติในหัวข้อ */
+  .hero h1 .black-text {
+    color: black;
+  }
+  
+  /* ย่อหน้าใน Hero */
+  .hero p {
+    font-size: 20px;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* ปุ่ม Call to Action (CTA) */
+  .cta-button {
+    display: inline-block;
+    background: black;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  /* ปุ่ม CTA เมื่อ hover */
+  .cta-button:hover {
+    background: black;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none; /* ซ่อนเมนูบนมือถือ */
+    }
+    
+    .hero {
+      padding: 60px 0;
+    }
+    
+    .hero h1 {
+      font-size: 40px;
+    }
+    
+    .hero p {
+      font-size: 18px;
+    }
+  }
